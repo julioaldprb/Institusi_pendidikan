@@ -85,6 +85,7 @@ Berikut link dari projek yang sudah di deploy : `https://institusipendidikan-cgn
 - Kolom Status bertipe object, yang kemungkinan besar merupakan label klasifikasi, misalnya Graduate, Dropout, atau mungkin lainnya.
 
 **Distribusi Target**
+
 ![image](https://github.com/user-attachments/assets/30e2dc60-a359-4772-8149-589620556995)
 
 Gambar menampilkan distribusi status mahasiswa dalam dataset:
@@ -143,7 +144,9 @@ Dari hasil korelasi terhadap fitur is_dropout, berikut penjelasan singkat untuk 
     Latar belakang pendidikan sebelumnya punya sedikit pengaruh.
 
 **Analisis Kategori Course**
+
 ![image](https://github.com/user-attachments/assets/b9f2196f-9afd-49c2-9993-65e467c24676)
+
 
 Grafik yang Anda tampilkan menunjukkan distribusi jumlah mahasiswa berdasarkan kode Course (program studi). Berikut beberapa insight dari grafik:
 
@@ -184,6 +187,7 @@ Grafik yang Anda tampilkan menunjukkan distribusi jumlah mahasiswa berdasarkan k
 
   6. **Evaluation**
      - ROC Curve
+       
        ![image](https://github.com/user-attachments/assets/63b73d21-4f8c-4210-a3ac-2c949b421448)
 
        Menunjukkan ROC curve yang memvisualisasikan performa model klasifikasi.
@@ -194,6 +198,7 @@ Grafik yang Anda tampilkan menunjukkan distribusi jumlah mahasiswa berdasarkan k
        - Semakin luas area di bawah kurva (AUC), semakin baik performa model dalam membedakan kelas.
 
      - Confusion Matrix
+       
        ![image](https://github.com/user-attachments/assets/190125fd-7240-4522-9241-c26fd72b198c)
        
        Confusion matrix dari hasil prediksi model:
