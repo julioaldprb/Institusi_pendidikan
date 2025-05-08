@@ -44,7 +44,7 @@ Dataset diambil dari [Students Performance](https://github.com/dicodingacademy/d
 
 ### Setup Environment (Streamlit Model)
 1. **Install Dependencies**
-Pastikan Anda menggunakan Python 3.10 dan menginstal dependensi yang tercantum dalam `requirements.txt`:
+Pastikan Anda menggunakan Python 3.10 serta anaconda dan menginstal dependensi yang tercantum dalam `requirements.txt`:
 Nb : - `requirements.txt` pada folder Institusi_Pendidikan untuk model pada streamlit dan `requirements.txt` yang diluar dari folder tersebut untuk google colab
      - file untuk menjalankan secara local terdapat pada folder Institusi_pendidikan
 3. **Setup Environment**
@@ -52,9 +52,10 @@ Nb : - `requirements.txt` pada folder Institusi_Pendidikan untuk model pada stre
 git clone https://github.com/julioaldprb/Institusi_pendidikan
 cd Institusi_pendidikan
 pip install -r requirements.txt
+conda activate siakad
 streamlit run app.py
 ```
-Berikut link dari projek yang sudah di deploy : `https://institusipendidikan-cgnmrx6nykbqqekbtfne6g.streamlit.app/`
+Berikut link dari projek yang sudah di deploy dengan model: `https://institusipendidikan-cgnmrx6nykbqqekbtfne6g.streamlit.app/`
 
 ### Google Colab
 1. **Instal dan Import Library**
@@ -86,7 +87,7 @@ Berikut link dari projek yang sudah di deploy : `https://institusipendidikan-cgn
 
 **Distribusi Target**
 
-![image](https://github.com/user-attachments/assets/30e2dc60-a359-4772-8149-589620556995)
+![Distribusi Target](gambar/eda1.png)
 
 Gambar menampilkan distribusi status mahasiswa dalam dataset:
 - Graduate (Lulus): sekitar 2200+ mahasiswa
@@ -145,7 +146,7 @@ Dari hasil korelasi terhadap fitur is_dropout, berikut penjelasan singkat untuk 
 
 **Analisis Kategori Course**
 
-![image](https://github.com/user-attachments/assets/b9f2196f-9afd-49c2-9993-65e467c24676)
+![Kategori Course](gambar/eda2.png)
 
 
 Grafik yang Anda tampilkan menunjukkan distribusi jumlah mahasiswa berdasarkan kode Course (program studi). Berikut beberapa insight dari grafik:
@@ -155,6 +156,189 @@ Grafik yang Anda tampilkan menunjukkan distribusi jumlah mahasiswa berdasarkan k
     2. Setelah itu, Course 9147, 9238, 9085, dan 9773 juga cukup tinggi peminatnya.
 
     3. Course dengan kode 33 hampir tidak memiliki mahasiswa—mungkin sudah tidak aktif atau hanya ada satu orang.
+
+**EDA Univariate**
+
+![EDA Univariate](gambar/unv1.png)
+
+![EDA Univariate](gambar/unv2.png)
+
+![EDA Univariate](gambar/unv3.png)
+
+![EDA Univariate](gambar/unv4.png)
+
+![EDA Univariate](gambar/unv5.png)
+
+![EDA Univariate](gambar/unv6.png)
+
+![EDA Univariate](gambar/unv7.png)
+
+![EDA Univariate](gambar/unv8.png)
+
+![EDA Univariate](gambar/unv9.png)
+
+![EDA Univariate](gambar/unv10.png)
+
+![EDA Univariate](gambar/unv11.png)
+
+![EDA Univariate](gambar/unv12.png)
+
+![EDA Univariate](gambar/unv12.png)
+
+![EDA Univariate](gambar/unv13.png)
+
+![EDA Univariate](gambar/unv14.png)
+
+![EDA Univariate](gambar/unv15.png)
+
+![EDA Univariate](gambar/unv16.png)
+
+![EDA Univariate](gambar/unv17.png)
+
+![EDA Univariate](gambar/unv18.png)
+
+![EDA Univariate](gambar/unv19.png)
+
+![EDA Univariate](gambar/unv20.png)
+
+![EDA Univariate](gambar/unv21.png)
+
+![EDA Univariate](gambar/unv22.png)
+
+![EDA Univariate](gambar/unv23.png)
+
+![EDA Univariate](gambar/unv24.png)
+
+![EDA Univariate](gambar/unv25.png)
+
+![EDA Univariate](gambar/unv26.png)
+
+![EDA Univariate](gambar/unv27.png)
+
+![EDA Univariate](gambar/unv28.png)
+
+![EDA Univariate](gambar/unv29.png)
+
+![EDA Univariate](gambar/unv30.png)
+
+![EDA Univariate](gambar/unv31.png)
+
+![EDA Univariate](gambar/unv32.png)
+
+![EDA Univariate](gambar/unv33.png)
+
+![EDA Univariate](gambar/unv34.png)
+
+![EDA Univariate](gambar/unv35.png)
+
+- **Distribusi Marital_status** =
+Mayoritas responden memiliki status pernikahan bernilai 1, yang kemungkinan besar merepresentasikan satu kategori dominan (misalnya, "belum menikah"). Kategori lain sangat sedikit jumlahnya.
+
+- **Distribusi Application_order** =
+Sebagian besar responden mengajukan aplikasi pada urutan pertama (1), dan frekuensinya menurun drastis untuk urutan berikutnya. Artinya, mayoritas mahasiswa diterima di pilihan pertama mereka.
+
+- **Distribusi Course** =
+Ada beberapa kelompok angka besar yang mendominasi (misalnya, mendekati angka 9000-10000), menunjukkan bahwa sebagian besar responden mengambil jenis kursus tertentu (kemungkinan diwakili dengan kode numerik besar), sementara lainnya sangat sedikit.
+
+- **Distribusi Daytime_evening_attendance** =
+Sebagian besar responden memiliki nilai 1, yang kemungkinan berarti mereka mengikuti kuliah pada waktu tertentu (misalnya, malam hari), sedangkan hanya sebagian kecil yang memiliki nilai 0.
+
+- **Distribusi Previous_qualification** =
+Hampir semua responden memiliki nilai 1, menunjukkan jenis kualifikasi sebelumnya yang sama, dengan sedikit variasi pada kategori lain (mungkin kode kualifikasi lain seperti 20, 40, dll.).
+
+- **Distribusi Previous_qualification_grade** =
+Grafik ini menunjukkan distribusi nilai kualifikasi sebelumnya. Nilai berkisar antara sekitar 90 hingga 180, dengan mayoritas nilai berkumpul di kisaran 130–140. Ini menunjukkan bahwa sebagian besar siswa memiliki nilai sebelumnya dalam kisaran tersebut. Distribusi terlihat seperti distribusi normal dengan sedikit skew ke kanan.
+
+- **Distribusi Nacionality** =
+Grafik ini menunjukkan bahwa hampir semua data berasal dari satu kategori nasionalitas (kemungkinan besar satu negara dominan). Hal ini terlihat dari satu batang yang sangat tinggi di posisi indeks sekitar 1–2, sementara kategori lainnya nyaris tidak ada frekuensinya.
+
+- **Mothers_qualification** =
+Mayoritas ibu terkonsentrasi pada jenjang nilai 38, dengan puncak lebih kecil di 1 dan 20, sedangkan kategori lain hampir tidak muncul.
+
+- **Fathers_qualification** =
+Distribusi ayah serupa: nilai 38 mendominasi, disusul nilai 1 dan 20, sementara jenjang lain sangat jarang.
+
+- **Mothers_occupation** =
+Sebagian besar ibu berada di kategori 0–1 (kemungkinan tidak bekerja atau pekerjaan umum), dengan beberapa outlier sangat jarang di angka tinggi.
+
+- **Distribusi Fathers_occupation** =
+menunjukkan bahwa mayoritas nilai kode pekerjaan ayah terpusat di kategori rendah (sekitar 1–10), dengan frekuensi di kisaran 2.000–2.200. Terdapat pula beberapa outlier di kode tinggi (sekitar 80 dan 100), namun jumlahnya sangat kecil (di bawah 50).
+
+- **Distribusi Admission_grade** =
+cenderung membentuk kurva mendekati normal, dengan nilai ujian masuk berkisar antara 90 hingga hampir 180. Titik puncak frekuensi berada di kisaran 120–130, di mana masing‑masing bin mencatat sekitar 350–450 siswa.
+
+- **Distribusi Displaced** =
+memperlihatkan variabel biner: sekitar 2.000 siswa tidak tergolong displaced (0), dan lebih banyak—sekitar 2.400 siswa—tergolong displaced (1).
+
+- **Distribusi Educational_special_needs** =
+juga biner dan menunjukkan bahwa mayoritas besar siswa (lebih dari 4.300) tidak memiliki kebutuhan khusus, sementara hanya sekitar 80–100 siswa yang tercatat berkebutuhan khusus.
+
+- **Distribusi Debtor** =
+memperlihatkan sekitar 3.900 siswa tanpa tunggakan biaya (0), dan sekitar 500 siswa tercatat sebagai debtor (1), menandakan sebagian kecil memiliki tunggakan.
+
+- **Distribusi Tuition_fees_up_to_date** =
+hampir terbalik dengan Debtor: sekitar 3.900 siswa biaya pendidikannya tercatat sudah lunas (1), dan sekitar 500 siswa belum sepenuhnya membayar (0).
+
+- **Distribusi Gender** =
+menggambarkan pembagian dua kategori, di mana satu kelompok (kode 0) berjumlah sekitar 2.800 siswa, sedangkan kelompok lainnya (kode 1) sekitar 1.500 siswa.
+
+- **Distribusi Age_at_enrollment** =
+sangat miring ke kanan: sebagian besar siswa berusia 18–22 tahun, dengan puncak frekuensi di usia 19 (±1.500 siswa) dan 20 (±1.000 siswa). Terdapat ekor panjang hingga usia di atas 40, namun jumlahnya sangat sedikit.
+
+- **Distribusi Scholarship_holder** =
+menandakan bahwa mayoritas siswa (sekitar 3.300) tidak memegang beasiswa (0), sedangkan sekitar 1.100 siswa tercatat sebagai pemegang beasiswa (1).
+
+- **Age\_at\_enrollment**: Mayoritas mendaftar antara 17–22 tahun, puncak di 18–19.
+- **International**: Hampir seluruhnya domestik (0), sangat sedikit internasional (1).
+- **1st\_sem\_credited**: Sebagian besar 0–1 sks terakreditasi.
+- **1st\_sem\_enrolled**: Umumnya mengambil 5–7 sks, puncak di 6.
+- **1st\_sem\_evaluations**: Biasanya 7–11 evaluasi, puncak di 8–9.
+- **1st\_sem\_approved**: Kebanyakan 5–7 sks disetujui, puncak di 6.
+- **1st\_sem\_grade**: Nilai rata‑rata 10–15, puncak di 12–13.
+- **1st\_sem\_without\_evaluations**: Hampir semua unit dievaluasi (0 tanpa evaluasi).
+- **2nd\_sem\_credited**: Mirip sem 1, kebanyakan 0–1 sks terakreditasi.
+- **2nd\_sem\_enrolled**: Lagi-lagi 5–7 sks diambil, puncak di 6.
+- **2nd\_sem\_evaluations**: Umumnya 5–13 evaluasi, puncak di 7–9.
+- **2nd\_sem\_approved**: Lagi, 5–7 sks disetujui terbanyak.
+- **2nd\_sem\_grade**: Nilai 10–15, puncak di 12–13.
+- **2nd\_sem\_without\_evaluations**: Hampir semua unit ter­evaluasi.
+- **Unemployment\_rate**: Variasi 7–17%, distribusi cukup merata.
+- **Inflation\_rate**: Berkisar –1% sampai >3%, dengan klaster di \~1–2% dan \~3–3,5%.
+- **GDP**: Pertumbuhan –4% hingga \~4%, tersebar tanpa puncak tunggal.
+
+**Multivariate Analysis**
+
+![Multivariate Analysis](gambar/ma1.png)
+
+![Multivariate Analysis](gambar/ma2.png)
+
+
+- **Heatmap Korelasi Fitur Numerik**
+
+Gambar ini menunjukkan korelasi antar fitur numerik. Fitur akademik seperti nilai dan kredit antar semester saling berkorelasi kuat, sedangkan sebagian besar fitur lain seperti latar belakang keluarga tidak menunjukkan hubungan signifikan.
+
+- **Age vs Grade (2nd Sem) by Dropout**
+
+Scatter plot ini menunjukkan bahwa mahasiswa dengan nilai semester dua rendah, terutama yang bernilai 0, cenderung dropout. Usia saat mendaftar tidak tampak berpengaruh besar terhadap dropout.
+
+
+**Numerical vs Categorical (Boxplot)**
+
+![Numerical vs Categorical](gambar/nvc.png)
+
+**Nilai Semester 2 per Status Dropout**
+
+Boxplot ini memperlihatkan bahwa mahasiswa yang dropout memiliki nilai semester dua lebih rendah secara umum dibandingkan yang tidak dropout, dengan banyak yang mendapat nilai 0.
+
+**Categorical vs Categorical (Cross-tab)**
+
+| Gender | is_dropout: 0 (%) | is_dropout: 1 (%) |
+|--------|-------------------|-------------------|
+| 0      | 74.90             | 25.10             |
+| 1      | 54.95             | 45.05             |
+
+- Gender 0 (kemungkinan laki-laki) memiliki 25,10% dropout dan 74,90% tidak dropout.
+- Gender 1 (kemungkinan perempuan) memiliki 45,05% dropout dan 54,95% tidak dropout.
 
 4. **Data Preparation**
    - **Drop Kolom Status** = Kolom Status dihapus karena target klasifikasi telah dibinerisasi menjadi kolom baru bernama is_dropout.
@@ -188,7 +372,7 @@ Grafik yang Anda tampilkan menunjukkan distribusi jumlah mahasiswa berdasarkan k
   6. **Evaluation**
      - ROC Curve
        
-       ![image](https://github.com/user-attachments/assets/63b73d21-4f8c-4210-a3ac-2c949b421448)
+       ![ROC Curve](gambar/eda3.png)
 
        Menunjukkan ROC curve yang memvisualisasikan performa model klasifikasi.
 
@@ -199,7 +383,7 @@ Grafik yang Anda tampilkan menunjukkan distribusi jumlah mahasiswa berdasarkan k
 
      - Confusion Matrix
        
-       ![image](https://github.com/user-attachments/assets/190125fd-7240-4522-9241-c26fd72b198c)
+       ![Confusion Matrix](gambar/eda4.png)
        
        Confusion matrix dari hasil prediksi model:
 
@@ -245,7 +429,9 @@ Nb : Folder untuk dashboard metabase ada di folder data
 Metabase dijalankan dengan perintah Docker berikut:
 
 ```bash
-docker run -d --name metabase2 -p 3000:3000 -v "D:/File Ku/Laskar AI/Belajar Penerapan Data Science/Institusi Pendidikan/metabase.db:/metabase.db" metabase/metabase
+docker run -d --name metabase2 -p 3001:3000 `
+-v "D:/File Ku/Laskar AI/Belajar Penerapan Data Science/Institusi Pendidikan/submission/data/metabase-data:/metabase.db" `
+metabase/metabase
 ```
 - 📌 Gunakan path lengkap dan ubah \ menjadi / pada Windows.
 - 📌 Metabase akan membaca isi folder metabase.db saja.
@@ -254,18 +440,20 @@ docker run -d --name metabase2 -p 3000:3000 -v "D:/File Ku/Laskar AI/Belajar Pen
 Agar Metabase dapat mengakses file students_data.db, kamu harus:
 
 Buat folder metabase.db di direktori proyek dan salin ke dalam folder tersebut :
-`D:\File Ku\Laskar AI\Belajar Penerapan Data Science\Institusi Pendidikan\data\metabase-data`
+`D:/File Ku/Laskar AI/Belajar Penerapan Data Science/Institusi Pendidikan/submission/data/metabase-data:/metabase.db"`
 
 ### 🔄 3. Restart Kontainer Metabase (Jika Sudah Pernah Dijalankan)
 Jika kontainer metabase2 sudah pernah dibuat sebelumnya, jalankan ulang dengan perintah berikut
 ```bash
 docker stop metabase2
 docker rm metabase2
-docker run -d --name metabase2 -p 3000:3000 -v "D:/File Ku/Laskar AI/Belajar Penerapan Data Science/Institusi Pendidikan/metabase.db:/metabase.db" metabase/metabase
+docker run -d --name metabase2 -p 3001:3000 `
+-v "D:/File Ku/Laskar AI/Belajar Penerapan Data Science/Institusi Pendidikan/submission/data/metabase-data:/metabase.db" `
+metabase/metabase
 ```
 
 ### 🌐 4. Akses Metabase via Browser
-```http://localhost:3000```
+```http://localhost:3001```
 
 ### 🧩 5. Hubungkan File SQLite ke Metabase
 1. Di halaman awal Metabase, pilih Add your own data.
@@ -275,6 +463,42 @@ docker run -d --name metabase2 -p 3000:3000 -v "D:/File Ku/Laskar AI/Belajar Pen
 
 ### 🛑 6. Stop atau Start Metabase
 `docker stop metabase2`
+
+## Conclusion
+
+Berdasarkan analisis dan model prediktif yang telah dibangun:
+
+1. **Karakteristik Umum Siswa Berisiko Dropout**  
+   - Nilai akademik (semester 1 & 2) rata‑rata lebih rendah dibandingkan non‑dropout (sekitar 6–8 vs 11–13).  
+   - Usia pendaftaran cenderung lebih tua (> 25 tahun) dan memiliki catatan keuangan (Debtor = 1).  
+   - Tingkat kehadiran kurang (banyak mata kuliah tanpa evaluasi).  
+   - Faktor ekonomi makro (tingkat pengangguran tinggi) sedikit meningkatkan risiko.
+
+2. **Performa Model**  
+   - XGBoost terpilih dengan ROC‑AUC 0.93, F1‑score 0.81—cukup andal untuk menandai siswa risk‑dropout.  
+   - Precision (0.87) dan Recall (0.76) menyeimbangkan false positive dan false negative.
+
+3. **Manfaat Bisnis**  
+   - Tim HR Dapat Memprioritaskan Intervensi Dini pada kelompok risiko tinggi (probabilitas > 70%).  
+   - Dashboard Metabase memungkinkan monitoring bulanan dan penyesuaian kebijakan berbasis data.
+
+## 📌 Kesimpulan Akhir
+
+Berdasarkan hasil eksplorasi dan penerapan beberapa model machine learning, berikut adalah kesimpulan utama dari analisis yang telah dilakukan:
+
+- Masalah utama yang dihadapi adalah prediksi mahasiswa yang berisiko mengalami dropout berdasarkan data historis mereka.
+- Dari keempat model yang digunakan (Random Forest, SVM, Naive Bayes, dan XGBoost), model **XGBoost** memberikan performa terbaik dengan akurasi dan F1-score tertinggi.
+- Model XGBoost mampu menangkap pola kompleks pada data, terutama dalam membedakan siswa yang dropout dan tidak dropout.
+- Insight penting dari data:
+   1. Mahasiswa dengan nilai IPK (grade) rendah di semester awal, jumlah evaluasi yang tidak diikuti, serta tunggakan pembayaran cenderung lebih tinggi mengalami dropout.
+   2. Faktor-faktor seperti tidak up-to-date dalam pembayaran, umur saat mendaftar, dan status beasiswa juga turut memengaruhi kecenderungan dropout.
+- Dengan hasil ini, institusi pendidikan dapat lebih proaktif dalam melakukan intervensi terhadap mahasiswa yang berisiko tinggi.
+
+Model ini dapat dijadikan sistem pendukung keputusan (decision support system) oleh bagian akademik dan HR untuk meningkatkan retensi mahasiswa.
+
+
+
+Kesimpulannya, implementasi prototipe ini akan membantu Jaya Jaya Institut mengidentifikasi dan membimbing siswa berisiko tinggi, sehingga dapat menurunkan angka dropout hingga 10–15% per tahun.
 
 ## Rekomendasi Action Items
 - **Intervensi Dini:** Penting untuk segera menindaklanjuti siswa dengan probabilitas risiko di atas 70%. Setelah prediksi menandakan risiko tinggi, adakan sesi konsultasi satu‑ke‑satu dengan guru pembimbing dan     konselor untuk mengidentifikasi hambatan belajar spesifik, kemudian susun rencana belajar personal yang berfokus pada penanganan kendala tersebut.
