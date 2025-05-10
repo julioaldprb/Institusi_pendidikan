@@ -38,24 +38,9 @@ Pihak pengelola dan pengajar membutuhkan alat bantu yang intuitif untuk mengakse
 
 ---
 
-## Dokumentasi 
+## Persiapan
 ### Sumber Data
 Dataset diambil dari [Students Performance](https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/data.csv).
-
-### Setup Environment (Streamlit Model)
-1. **Install Dependencies**
-Pastikan Anda menggunakan Python 3.10 serta anaconda dan menginstal dependensi yang tercantum dalam `requirements.txt`:
-Nb : - `requirements.txt` pada folder Institusi_Pendidikan untuk model pada streamlit dan `requirements.txt` yang diluar dari folder tersebut untuk google colab
-     - file untuk menjalankan secara local terdapat pada folder Institusi_pendidikan
-3. **Setup Environment**
-```bash
-git clone https://github.com/julioaldprb/Institusi_pendidikan
-cd Institusi_pendidikan
-pip install -r requirements.txt
-conda activate siakad
-streamlit run app.py
-```
-Berikut link dari projek yang sudah di deploy dengan model: `https://institusipendidikan-cgnmrx6nykbqqekbtfne6g.streamlit.app/`
 
 ### Google Colab
 1. **Instal dan Import Library**
@@ -464,8 +449,38 @@ metabase/metabase
 ### 🛑 6. Stop atau Start Metabase
 `docker stop metabase2`
 
-## Conclusion
+## Business Dashboard
 
+Dashboard yang telah dibuat terdiri dari beberapa visualisasi utama untuk memonitor performa mahasiswa di Jaya Jaya Institut:
+
+1. **Distribusi Status Dropout**  
+   - Menampilkan proporsi mahasiswa yang dropout vs tidak dropout (Donut Chart).  
+2. **Dropout Berdasarkan Gender**  
+   - Perbandingan persentase dropout antara Laki-Laki dan Perempuan (Donut Chart).  
+3. **Jumlah Dropout per Program Studi**  
+   - Bar Chart yang memperlihatkan jumlah siswa dropout untuk masing-masing Course.  
+4. **Rata-Rata IPK Mahasiswa Dropout vs Tidak Dropout**  
+   - Bar Chart perbandingan rata-rata IPK pada mahasiswa yang dropout dan yang tidak.  
+5. **Dropout Rate per Course**  
+   - Bar Chart total mahasiswa vs total dropout berdasarkan Course.
+
+## Menjalankan Sistem Machine Learning
+### Setup Environment (Streamlit Model)
+1. **Install Dependencies**
+Pastikan Anda menggunakan Python 3.10 serta anaconda dan menginstal dependensi yang tercantum dalam `requirements.txt`:
+Nb : - `requirements.txt` pada folder Institusi_Pendidikan untuk model pada streamlit dan `requirements.txt` yang diluar dari folder tersebut untuk google colab
+     - file untuk menjalankan secara local terdapat pada folder Institusi_pendidikan
+3. **Setup Environment**
+```bash
+git clone https://github.com/julioaldprb/Institusi_pendidikan
+cd Institusi_pendidikan
+pip install -r requirements.txt
+conda activate siakad
+streamlit run app.py
+```
+Berikut link dari projek yang sudah di deploy dengan model: `https://institusipendidikan-cgnmrx6nykbqqekbtfne6g.streamlit.app/`
+
+## Conclusion
 Berdasarkan analisis dan model prediktif yang telah dibangun:
 
 1. **Karakteristik Umum Siswa Berisiko Dropout**  
